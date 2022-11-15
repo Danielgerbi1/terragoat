@@ -6,8 +6,7 @@ orbs:
 workflows:
     example-workflow:
       jobs:
-        - terraform/init
-        - terraform/validate:
+        - terraform/init:
            path: ./terraform/aws 
-        - terraform/plan:
-           path: ./terraform/aws 
+        - terraform/validate
+        - terraform/plan
