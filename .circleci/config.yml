@@ -1,0 +1,13 @@
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkov/scan:
+          api-key: 6bridgecrew-9example-2api-key1-demo9
+          directory: ./terragpat
+          output: json
+          repo-id: bridgecrewio/terragpat
+          soft-fail: true
+orbs:
+  checkov: bridgecrew/checkov-orb@0.0.3
+version: 2.1
