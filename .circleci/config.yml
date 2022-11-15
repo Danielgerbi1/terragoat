@@ -5,7 +5,6 @@ workflows:
   deploy_infrastructure:
     jobs:
       - terraform/fmt:
-          path: ./terraform/aws
           checkout: true
           context: terraform
       - terraform/validate:
