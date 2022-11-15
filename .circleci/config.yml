@@ -6,6 +6,6 @@ orbs:
 workflows:
     example-workflow:
       jobs:
-        - terraform/init
         - terraform/validate
+        - terraform/init
         - terraform/plan
