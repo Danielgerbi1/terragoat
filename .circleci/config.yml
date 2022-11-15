@@ -1,10 +1,10 @@
-version: '2.1'
+version: 2.1
 
 orbs:
   terraform: circleci/terraform@1.2.0
 workflows:
   deploy_infra:
-    jobs:
+    jobs: 
     - terraform/validate:
         checkout: true
         context: terraform
@@ -14,11 +14,4 @@ workflows:
         persist-workspace: true
         requires:
         - terraform/validate
-    - terraform/apply:
-        attach-workspace: true
-        context: terraform
-        filters:
-          branches:
-            only: master
-          requires:
-          - terraform/plan
+    
